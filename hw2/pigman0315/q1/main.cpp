@@ -43,9 +43,7 @@ Line::Line(Line const & other){
             m_vec.clear();
         }
         m_size = other.m_size;
-        for(int i = 0;i < m_size;i++){
-            m_vec.push_back(other.m_vec[i]);
-        }
+        m_vec.assign(other.m_vec.begin(),other.m_vec.end());
     }
     else{
         m_vec.clear();
